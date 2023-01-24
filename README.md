@@ -24,7 +24,7 @@
 
 
 ### Run the web application
-1. Start the application running the command `./mvnw spring-boot:run`
+1. Start the application running the command `./mvnw compile quarkus:dev`
 1. Open a new terminal and run `curl -v http://localhost:8080`; you won't get 3 records previously published to the topic but the following exception
    org.jboss.resteasy.spi.UnhandledException: java.lang.NoSuchMethodError: 'io.vertx.core.json.JsonObject io.vertx.core.json.JsonObject.put(java.lang.String, java.lang.String)'
 
