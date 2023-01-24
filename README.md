@@ -3,7 +3,7 @@
 ### Preliminary steps
 
 1. Start docker desktop
-1. In a terminal from the root directory of the project run `docker compose -f .\docker-compose.yml -p ksqldb-demo up -d`
+1. In a terminal from the root directory of the project run `docker compose -f ./docker-compose.yml -p ksqldb-demo up -d`; Use `docker compose -f ./docker-compose.yml -p ksqldb-demo start` if containers have been already created
 1. Once all the containers are up and running run the command  `docker exec broker kafka-topics --bootstrap-server broker:29092 --create --topic messages-avro-topic` to create the kafka topic
 1. Run `docker exec -it schema-registry bash`
 1. The prompt [appuser@schema-registry ~]$ comes up
@@ -28,7 +28,7 @@
 1. Open a new terminal and run `curl -v http://localhost:8080`; you won't get 3 records previously published to the topic but the following exception
    org.jboss.resteasy.spi.UnhandledException: java.lang.NoSuchMethodError: 'io.vertx.core.json.JsonObject io.vertx.core.json.JsonObject.put(java.lang.String, java.lang.String)'
 
-1. 1. Execute the command `docker compose -f .\docker-compose.yml -p ksqldb-demo stop` or down if you no longer need to use data generated in preliminary steps 
+1. 1. Execute the command `docker compose -f ./docker-compose.yml -p ksqldb-demo stop` or down if you no longer need to use data generated in preliminary steps 
 
 
 
