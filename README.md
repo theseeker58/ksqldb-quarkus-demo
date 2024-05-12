@@ -25,8 +25,7 @@
 
 ### Run the web application
 1. Start the application running the command `./mvnw compile quarkus:dev`
-1. Open a new terminal and run `curl -v http://localhost:8080`; you won't get 3 records previously published to the topic but the following exception
-   org.jboss.resteasy.spi.UnhandledException: java.lang.NoSuchMethodError: 'io.vertx.core.json.JsonObject io.vertx.core.json.JsonObject.put(java.lang.String, java.lang.String)'
+1. Open a new terminal and run `curl -v http://localhost:8080`; you will get 3 records previously published to the topic
 
 1. 1. Execute the command `docker compose -f ./docker-compose.yml -p ksqldb-demo stop` or down if you no longer need to use data generated in preliminary steps 
 
