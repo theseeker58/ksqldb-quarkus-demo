@@ -1,5 +1,7 @@
 package com.fsajeva.ksqldb;
 
+import io.quarkus.runtime.annotations.RegisterForReflection;
+
 public class Message {
     private String sender;
     private String sequence;
